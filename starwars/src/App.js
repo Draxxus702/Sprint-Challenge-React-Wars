@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import './App.css';
+import './components/Card'
+
 
 import Card from './components/Card'
 
@@ -28,16 +30,13 @@ useEffect(()=>{
   return (
     
     <div className="App">
-      {console.log('this is a star',star)}
-       {/* <h1 className="Header">React Wars</h1> */}
-{/* //       {star.results.map(p => (  */}
-{/* //     <Card */}
-{/* //     key={p.edited}
-//     name={p.name}
-//     /> */}
-     
-   
-{/* // ))} */}
+     {star.map(p =>(
+       <Card
+       key={p.name}
+       name={p.name}
+       />
+     ))}
+ 
     </div>
   );
 }
