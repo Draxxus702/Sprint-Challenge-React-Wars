@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import './App.css';
-import './components/Card'
+import './components/Cards'
 
 
-import Card from './components/Card'
+import Cards from './components/Cards'
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -30,13 +30,15 @@ useEffect(()=>{
   return (
     
     <div className="App">
+      <h1>REACT WARS</h1>
+      <div className='characters'>
      {star.map(p =>(
-       <Card
+       <Cards
        key={p.name}
-       name={p.name}
+       character={p}
        />
      ))}
- 
+ </div>
     </div>
   );
 }
